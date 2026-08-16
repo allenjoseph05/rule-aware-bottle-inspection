@@ -1,0 +1,107 @@
+# Competition Data — Rules §2.4b requires we do not transmit, duplicate, publish or redistribute
+# the dataset outside the Competition. Keep ALL competition-provided files out of git.
+data/samples/*.png
+data/train_images/
+data/test_images/
+data/*.zip
+data/train.csv
+data/sample_submission.csv
+data/train_annotations.json
+data/to_download.txt
+data/
+
+# Model checkpoints, ONNX exports, training logs
+artefacts/
+*.onnx
+*.pt
+*.pth
+*.ckpt
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Kaggle credentials — never commit
+kaggle.json
+kaggle_token
+.kaggle/
+
+# Environment
+.env
+.env.local
+
+# Internal research notes and generated documents. The public repository keeps
+# one curated root README; project plans, handoffs, reports, and slide decks are
+# intentionally not published.
+*.md
+!README.md
+*.docx
+*.pdf
+*.pptx
+*.html
+*.svg
+*.mmd
+writeup/
+presentations/
+.claude/
+efficiency_formula.png
+
+# Generated predictions, cached features, logs, and temporary run state
+*.csv
+*.log
+*.dmp
+*.db
+*.db-journal
+*.npz
+*.old
+tmp_*/
+tmp_logs/
+tmp_status/
+v57_output/
+
+# Vendored binary dependencies and compiled artifacts
+*.whl
+*.so
+*.dll
+*.pyd
+
+# Do not publish the full experiment scratch space. Explicitly retain only the
+# compact, representative training, validation, and deployment implementations.
+external/*
+!external/group05_train/
+external/group05_train/*
+!external/group05_train/group05_training_notebook.ipynb
+!external/group05_eval_final/
+external/group05_eval_final/*
+!external/group05_eval_final/group05_eval_notebook.py
+!external/v62_pull/
+external/v62_pull/*
+!external/v62_pull/v62_flat.py
+!external/v62_singlepass.py
+!external/v62_sp_stability.py
+!external/export_v62sp_onnx.py
+!external/fp16_fix.py
+
+notebooks/*
+!notebooks/_build_v66_decision_aligned_seg.py
+!notebooks/v66_decision_aligned_seg.ipynb
+!notebooks/_build_fast_benchmark.py
+!notebooks/fast_benchmark.ipynb
+
+scripts/*
+!scripts/build_v70_from_signals.py
+!scripts/crossarch_committee.py
+!scripts/overfit_diagnostics.py
+!scripts/profile_preprocess.py
+!scripts/robustness_audit.py
+!scripts/verify_pipeline_equivalence.py
